@@ -38,11 +38,15 @@ void cNhanVienSX::Nhap() {
 }
 
 void cNhanVienSX::Xuat() const {
-    cout<< "- Ma NV: " << maNV <<'\t'
-        << "Ten: " << hoTen  <<'\t'
-        << "Ngay sinh: "; ngaySinh.Xuat();
-    cout <<'\t' << "So SP: " << soSanPham <<'\t'
-    << "Don gia: " << fixed << setprecision(0) << donGia <<'\t'
+    cout << left
+         << "- Ma NV: " << setw(8) << maNV
+         << "Ten: " << setw(20) << hoTen
+         << "Ngay sinh: ";
+
+    ngaySinh.Xuat(); // In ra ngay sinh (DD/MM/YYYY)
+
+    cout << "   So SP: " << setw(5) << soSanPham
+         << "Don gia: " << setw(10) << fixed << setprecision(0) << donGia
          << "Luong: " << TinhLuong() << "\n";
 }
 
