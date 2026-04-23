@@ -10,10 +10,20 @@ int NhapSoNguyen(const string& thongBao, int minVal = -999999) {
     int giaTri;
     while (true) {
         cout << thongBao;
-        if (cin >> giaTri && giaTri >= minVal) {
-            return giaTri;
+
+        // Buoc 1: Kiem tra xem nguoi dung co nhap dung dinh dang so khong
+        if (cin >> giaTri) {
+
+            // Buoc 2: Kiem tra xem so do co thoa man dieu kien minVal khong (De phan biet nhap n va nhap x)
+            if (giaTri >= minVal) {
+                return giaTri;
+            } else {
+                cout << "Vui long nhap so nguyen duong!\n";
+            }
+
         } else {
-            cout << "Vui long nhap so nguyen duong!\n";
+            // Neu nhap sai kieu du lieu (vi du: nhap chu)
+            cout << "Vui long chi nhap so nguyen!\n";
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
