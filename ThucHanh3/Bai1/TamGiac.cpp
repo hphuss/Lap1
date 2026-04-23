@@ -25,7 +25,7 @@ void cTamGiac::NhapTamGiac()
 }
 void cTamGiac::XuatTamGiac() const
 {
-    cout << "Tam giac duoc tao boi 3 dinh: A"; A.XuatDiem();
+    cout << "A"; A.XuatDiem();
     cout << ", B"; B.XuatDiem();
     cout << ", C"; C.XuatDiem();
     cout << "\n";
